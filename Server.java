@@ -208,7 +208,7 @@ public class Server {
            os.println("Enter a command followed by the information.");
            os.println(" ");
            os.println("EXAMPLES:");
-           os.println("ADD Jinhua Guo 313-123-4567");
+           os.println("ADD Keanu Reeves 313-123-4567");
            os.println("EDIT 1001 BIG BIRD 313-911-4411");
            os.println("DELETE 1001" );
            os.println("LIST");
@@ -321,7 +321,7 @@ public class Server {
                         }
                         myReader.close();
                     } catch (FileNotFoundException e) {
-                       os.println("Unknown Error occured when trying to list all the accounts.");
+                       os.println("Unknown Error occurred when trying to list all the accounts.");
                         e.printStackTrace();
                         os.println("");
                     }

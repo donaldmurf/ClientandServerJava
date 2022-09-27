@@ -11,7 +11,7 @@ do the following:
 javac Server.java
 javac Client.java
 
--After doing one of the above methods to compile the program
+-After doing one of the above methods to compile the program,
 the program is ready to run.
 To run the Server enter:
 java Server
@@ -47,11 +47,11 @@ An example of using list:
 LIST
 
 SHUTDOWN:
-To shutdown enter "SHUTDOWN".
+To shut down enter "SHUTDOWN".
 This will shut down the server
 
 QUIT:
-To shutdown enter "QUIT".
+To shut down enter "QUIT".
 This will shut down the client only
 
 
@@ -61,7 +61,7 @@ This will shut down the client only
 Enter a command followed by the information.
  
 EXAMPLES:
-ADD Jinhua Guo 313-123-4567
+ADD Keanu Reeves 313-123-4567
 EDIT 1001 BIG BIRD 313-911-4411
 DELETE 1001
 LIST
@@ -75,7 +75,7 @@ list
 Enter a command followed by the information.
  
 EXAMPLES:
-ADD Jinhua Guo 313-123-4567
+ADD Keanu Reeves 313-123-4567
 EDIT 1001 BIG BIRD 313-911-4411
 DELETE 1001
 LIST
@@ -96,7 +96,7 @@ edit 1002 bill murray 313-233-4456
 Enter a command followed by the information.
  
 EXAMPLES:
-ADD Jinhua Guo 313-123-4567
+ADD Keanu Reeves 313-123-4567
 EDIT 1001 BIG BIRD 313-911-4411
 DELETE 1001
 LIST
@@ -112,7 +112,7 @@ list
 Enter a command followed by the information.
  
 EXAMPLES:
-ADD Jinhua Guo 313-123-4567
+ADD Keanu Reeves 313-123-4567
 EDIT 1001 BIG BIRD 313-911-4411
 DELETE 1001
 LIST
@@ -133,7 +133,7 @@ delete 1005
 Enter a command followed by the information.
  
 EXAMPLES:
-ADD Jinhua Guo 313-123-4567
+ADD Keanu Reeves 313-123-4567
 EDIT 1001 BIG BIRD 313-911-4411
 DELETE 1001
 LIST
@@ -147,7 +147,7 @@ list
 Enter a command followed by the information.
  
 EXAMPLES:
-ADD Jinhua Guo 313-123-4567
+ADD Keanu Reeves 313-123-4567
 EDIT 1001 BIG BIRD 313-911-4411
 DELETE 1001
 LIST
@@ -167,7 +167,7 @@ add bill gates 313-321-4780
 Enter a command followed by the information.
  
 EXAMPLES:
-ADD Jinhua Guo 313-123-4567
+ADD Keanu Reeves 313-123-4567
 EDIT 1001 BIG BIRD 313-911-4411
 DELETE 1001
 LIST
@@ -182,7 +182,7 @@ list
 Enter a command followed by the information.
  
 EXAMPLES:
-ADD Jinhua Guo 313-123-4567
+ADD Keanu Reeves 313-123-4567
 EDIT 1001 BIG BIRD 313-911-4411
 DELETE 1001
 LIST
