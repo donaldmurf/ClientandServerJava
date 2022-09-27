@@ -8,16 +8,30 @@ import java.util.Locale;
 
 public class Client
 {
+
     public static final int SERVER_PORT = 5746;
+    public static BufferedReader is = null;
+
+    public static void doRead() throws IOException {
+        String serverInput = null;
+        while((serverInput = is.readLine())!=null ) {
+            System.out.println(serverInput);
+            if(serverInput.equals("210 the server is about to shutdown ....."))
+                System.exit(0);
+
+        }
+    }
 
     public static void main(String[] args)
     {
         Socket clientSocket = null;
         PrintStream os = null;
-        BufferedReader is = null;
+
         String userInput = null;
         String serverInput = null;
         BufferedReader stdInput = null;
+
+
 
         //Check the number of command line parameters
         if (args.length < 1)
@@ -55,9 +69,17 @@ public class Client
                // while((serverInput = is.readLine())!=null)
                     //System.out.println(serverInput);
 
-                while((serverInput = is.readLine())!=null && !serverInput.isEmpty())
-                    System.out.println(serverInput);
-                while ((userInput = stdInput.readLine())!= null )
+                Thread t = new Thread(() -> {
+                    try {
+                        doRead();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                        return;
+
+                    }
+                });
+                t.start();
+                while ((userInput = stdInput.readLine())!= null && !clientSocket.isClosed() )
                 {
                     if(userInput.toUpperCase(Locale.ROOT).equals("QUIT")){
                         os.println(userInput); //exiting client
@@ -67,9 +89,9 @@ public class Client
                     }
 
 
+
                     os.println(userInput);
-                    while((serverInput = is.readLine())!=null && !serverInput.isEmpty())
-                        System.out.println(serverInput);
+
 
                 }
 

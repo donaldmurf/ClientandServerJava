@@ -11,7 +11,7 @@ do the following:
 javac Server.java
 javac Client.java
 
--After doing one of the above methods to compile the program,
+-After doing one of the above methods to compile the program
 the program is ready to run.
 To run the Server enter:
 java Server
@@ -47,12 +47,28 @@ An example of using list:
 LIST
 
 SHUTDOWN:
-To shut down enter "SHUTDOWN".
+To shutdown enter "SHUTDOWN".
 This will shut down the server
 
 QUIT:
-To shut down enter "QUIT".
+To shutdown enter "QUIT".
 This will shut down the client only
+
+LOGIN:
+To log in enter "LOGIN".
+This will take the client username and password with a space seperating them.
+
+LOGOUT:
+To log out enter "LOGOUT".
+This will logout the client.
+
+WHO:
+To list all the active users enter "WHO".
+This will list all the active users, including the UserID and the users IP addresses.
+
+LOOK:
+To look up a name in the book enter "LOOK".
+This will display the complete name and phone number record.
 
 
 ----SAMPLE OUTPUT----
@@ -61,7 +77,7 @@ This will shut down the client only
 Enter a command followed by the information.
  
 EXAMPLES:
-ADD Keanu Reeves 313-123-4567
+ADD 1001 keanu reeves 313-123-4567
 EDIT 1001 BIG BIRD 313-911-4411
 DELETE 1001
 LIST
@@ -75,7 +91,7 @@ list
 Enter a command followed by the information.
  
 EXAMPLES:
-ADD Keanu Reeves 313-123-4567
+ADD 1001 Keanu Reeves 313-123-4567
 EDIT 1001 BIG BIRD 313-911-4411
 DELETE 1001
 LIST
@@ -96,7 +112,7 @@ edit 1002 bill murray 313-233-4456
 Enter a command followed by the information.
  
 EXAMPLES:
-ADD Keanu Reeves 313-123-4567
+ADD 1001 Keanu Reeves 313-123-4567
 EDIT 1001 BIG BIRD 313-911-4411
 DELETE 1001
 LIST
@@ -112,7 +128,7 @@ list
 Enter a command followed by the information.
  
 EXAMPLES:
-ADD Keanu Reeves 313-123-4567
+ADD 1001 Keanu Reeves 313-123-4567
 EDIT 1001 BIG BIRD 313-911-4411
 DELETE 1001
 LIST
@@ -133,7 +149,7 @@ delete 1005
 Enter a command followed by the information.
  
 EXAMPLES:
-ADD Keanu Reeves 313-123-4567
+ADD 1001 Keanu Reeves 313-123-4567
 EDIT 1001 BIG BIRD 313-911-4411
 DELETE 1001
 LIST
@@ -147,7 +163,7 @@ list
 Enter a command followed by the information.
  
 EXAMPLES:
-ADD Keanu Reeves 313-123-4567
+ADD 1001 Keanu Reeves 313-123-4567
 EDIT 1001 BIG BIRD 313-911-4411
 DELETE 1001
 LIST
@@ -167,7 +183,7 @@ add bill gates 313-321-4780
 Enter a command followed by the information.
  
 EXAMPLES:
-ADD Keanu Reeves 313-123-4567
+ADD 1001 Keanu Reeves 313-123-4567
 EDIT 1001 BIG BIRD 313-911-4411
 DELETE 1001
 LIST
@@ -182,7 +198,7 @@ list
 Enter a command followed by the information.
  
 EXAMPLES:
-ADD Keanu Reeves 313-123-4567
+ADD 1001 Keanu Reeves 313-123-4567
 EDIT 1001 BIG BIRD 313-911-4411
 DELETE 1001
 LIST
@@ -199,4 +215,121 @@ Entry:
 1006 SAILOR MOON 313-444-6666
 1005 BILL GATES 313-321-4780
 
+//////////MAIN MENU//////////
+Enter a command followed by the information.
+ 
+EXAMPLES:
+LOGIN
+LOGOUT
+ADD 1001 Keanu Reeves 313-123-4567
+EDIT 1001 BIG BIRD 313-911-4411
+DELETE 1001
+LOOK
+WHO
+LIST
+SHUTDOWN
+QUIT
+//////////////////////////
+ 
+Entry: 
+LOGIN james 007!
 
+//////////MAIN MENU//////////
+Enter a command followed by the information.
+ 
+EXAMPLES:
+LOGIN
+LOGOUT
+ADD 1001 Keanu Reeves 313-123-4567
+EDIT 1001 BIG BIRD 313-911-4411
+DELETE 1001
+LOOK
+WHO
+LIST
+SHUTDOWN
+QUIT
+//////////////////////////
+ 
+Entry: 
+LOGOUT james
+
+//////////MAIN MENU//////////
+Enter a command followed by the information.
+ 
+EXAMPLES:
+LOGIN
+LOGOUT
+ADD 1001 Keanu Reeves 313-123-4567
+EDIT 1001 BIG BIRD 313-911-4411
+DELETE 1001
+LOOK
+WHO
+LIST
+SHUTDOWN
+QUIT
+//////////////////////////
+ 
+Entry: 
+LOOK james
+
+//////////MAIN MENU//////////
+Enter a command followed by the information.
+ 
+EXAMPLES:
+LOGIN
+LOGOUT
+ADD 1001 Keanu Reeves 313-123-4567
+EDIT 1001 BIG BIRD 313-911-4411
+DELETE 1001
+LOOK
+WHO
+LIST
+SHUTDOWN
+QUIT
+//////////////////////////
+ 
+Entry: 
+WHO
+200 OK 
+The list of the active users:
+john 141.215.69.202
+root 127.0.0.1
+
+//////////MAIN MENU//////////
+Enter a command followed by the information.
+ 
+EXAMPLES:
+LOGIN
+LOGOUT
+ADD 1001 Keanu Reeves 313-123-4567
+EDIT 1001 BIG BIRD 313-911-4411
+DELETE 1001
+LOOK
+WHO
+LIST
+SHUTDOWN
+QUIT
+//////////////////////////
+ 
+Entry:
+SHUTDOWN
+210 the server is about to shutdown ......
+
+//////////MAIN MENU//////////
+Enter a command followed by the information.
+ 
+EXAMPLES:
+LOGIN
+LOGOUT
+ADD 1001 Keanu Reeves 313-123-4567
+EDIT 1001 BIG BIRD 313-911-4411
+DELETE 1001
+LOOK
+WHO
+LIST
+SHUTDOWN
+QUIT
+//////////////////////////
+ 
+Entry:
+QUIT
