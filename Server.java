@@ -2,6 +2,7 @@
  * Server.java
  */
 
+import io.github.pixee.security.BoundedLineReader;
 import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
@@ -117,7 +118,7 @@ public class Server {
             BufferedReader in = new BufferedReader(new FileReader("Directory"));
             String str;
             List<String> list = new ArrayList<String>();
-            while ((str = in.readLine()) != null)
+            while ((str = BoundedLineReader.readLine(in, 5_000_000)) != null)
                 list.add(str);
             String[] stringArr = list.toArray((new String[0]));
             //
@@ -160,7 +161,7 @@ public class Server {
         BufferedReader in = new BufferedReader(new FileReader("Directory"));
         String str;
         List<String> list = new ArrayList<String>();
-        while ((str = in.readLine()) != null)
+        while ((str = BoundedLineReader.readLine(in, 5_000_000)) != null)
             list.add(str);  
         String[] stringArr = list.toArray((new String[0]));
         //
@@ -404,7 +405,7 @@ public class Server {
 
                     // As long as we receive data, echo that data back to the client.
 
-                    while ((line = is.readLine()) != null ) {
+                    while ((line = BoundedLineReader.readLine(is, 5_000_000)) != null ) {
                         if(line.toUpperCase().equals("SHUTDOWN")) {
                             is.close();
                             os.close();
