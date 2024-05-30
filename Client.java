@@ -59,7 +59,7 @@ public class Client
                     System.out.println(serverInput);
                 while ((userInput = stdInput.readLine())!= null )
                 {
-                    if(userInput.toUpperCase(Locale.ROOT).equals("QUIT")){
+                    if("QUIT".equals(userInput.toUpperCase(Locale.ROOT))){
                         os.println(userInput); //exiting client
                         System.out.println(is.readLine());
                         break;

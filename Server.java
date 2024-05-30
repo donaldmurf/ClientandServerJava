@@ -405,7 +405,7 @@ public class Server {
                     // As long as we receive data, echo that data back to the client.
 
                     while ((line = is.readLine()) != null ) {
-                        if(line.toUpperCase().equals("SHUTDOWN")) {
+                        if("SHUTDOWN".equals(line.toUpperCase())) {
                             is.close();
                             os.close();
                             serviceSocket.close();
