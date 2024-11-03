@@ -2,6 +2,7 @@
  * Client.java
  */
 
+import io.github.pixee.security.BoundedLineReader;
 import java.io.*;
 import java.net.*;
 import java.util.Locale;
@@ -55,20 +56,20 @@ public class Client
                // while((serverInput = is.readLine())!=null)
                     //System.out.println(serverInput);
 
-                while((serverInput = is.readLine())!=null && !serverInput.isEmpty())
+                while((serverInput = BoundedLineReader.readLine(is, 5_000_000))!=null && !serverInput.isEmpty())
                     System.out.println(serverInput);
-                while ((userInput = stdInput.readLine())!= null )
+                while ((userInput = BoundedLineReader.readLine(stdInput, 5_000_000))!= null )
                 {
                     if(userInput.toUpperCase(Locale.ROOT).equals("QUIT")){
                         os.println(userInput); //exiting client
-                        System.out.println(is.readLine());
+                        System.out.println(BoundedLineReader.readLine(is, 5_000_000));
                         break;
 
                     }
 
 
                     os.println(userInput);
-                    while((serverInput = is.readLine())!=null && !serverInput.isEmpty())
+                    while((serverInput = BoundedLineReader.readLine(is, 5_000_000))!=null && !serverInput.isEmpty())
                         System.out.println(serverInput);
 
                 }
